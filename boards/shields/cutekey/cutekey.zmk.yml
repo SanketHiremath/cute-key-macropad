@@ -1,8 +1,0 @@
-file_format: "1"
-id: cutekey
-name: cutekey macropad
-type: shield
-url: https://github.com/SanketHiremath/cute-key-macropad
-requires: [nice_nano_v2]
-features:
-  - keys

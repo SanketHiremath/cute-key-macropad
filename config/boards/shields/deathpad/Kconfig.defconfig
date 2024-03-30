@@ -1,5 +1,9 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_CUTEKEY
-    def_bool $(shields_list_contains,cutekey)
+if SHIELD_DEATHPAD
+
+config ZMK_KEYBOARD_NAME
+	default "Deathpad"
+
+endif

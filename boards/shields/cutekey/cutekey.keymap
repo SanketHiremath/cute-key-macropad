@@ -16,7 +16,17 @@
             bindings = <
                 &kp X
                 &kp Y
+                &mo 1
             >;
         };
+
+    bt_layer {
+            bindings = <
+                &none
+                &none
+                &bt BT_SEL 0
+            >;
+
+      };
     };
 };

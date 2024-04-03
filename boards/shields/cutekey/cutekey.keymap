@@ -16,15 +16,14 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "default_layer"
             bindings = <
                 &kp X
                 &kp Y
                 &kp Z
                 &kp A
                 &kp B
+
             >;
         };
-      };
-    
+    };
 };

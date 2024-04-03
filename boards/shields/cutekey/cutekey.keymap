@@ -22,20 +22,9 @@
                 &kp Y
                 &kp Z
                 &kp A
-                &lt new_layer
+                &kp B
             >;
         };
-
-    new_layer {
-        label = "new_layer"
-        bindings = <
-            &kp A
-            &kp B
-            &kp C 
-            &kp D
-            &lt default_layer
-        >;
-
       };
-    };
+    
 };

@@ -19,12 +19,16 @@
             bindings = <
                 &kp X
                 &kp Y
+                &kp Z
+                &kp A
                 &mo 1
             >;
         };
 
     bt_layer {
             bindings = <
+                &none
+                &none
                 &none
                 &none
                 &bt BT_SEL 0

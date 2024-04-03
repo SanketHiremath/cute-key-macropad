@@ -21,17 +21,17 @@
                 &kp Y
                 &kp Z
                 &kp A
-                &mo 1
+                &lt new_layer
             >;
         };
 
-    bt_layer {
+    new_layer {
             bindings = <
-                &kp a
-                &kp b
-                &kp c
-                &kp d
-                &bt BT_SEL 0
+                &kp A
+                &kp B
+                &kp C 
+                &kp D
+                &lt default_layer
             >;
 
       };

@@ -16,6 +16,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            label = "default_layer"
             bindings = <
                 &kp X
                 &kp Y
@@ -26,13 +27,14 @@
         };
 
     new_layer {
-            bindings = <
-                &kp A
-                &kp B
-                &kp C 
-                &kp D
-                &lt default_layer
-            >;
+        label = "new_layer"
+        bindings = <
+            &kp A
+            &kp B
+            &kp C 
+            &kp D
+            &lt default_layer
+        >;
 
       };
     };

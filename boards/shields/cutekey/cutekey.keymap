@@ -12,6 +12,13 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
+//-----------------------------------
+//   1(copy)         |       2(paste)
+//                |
+//-----------------------------------
+//    3(SS)        |       4(a)
+//                |
+//-----------------------------------
 
 / {
     keymap {
@@ -19,11 +26,11 @@
 
         default_layer {
             bindings = <
-                &kp X
-                &kp Y
-                &kp Z
-                &kp A
-                &kp B
+                &kp LC(C)
+                &kp LSHIFT(LGUI(S))
+                &kp LC(V)
+                &kp F5
+                &kp F5
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

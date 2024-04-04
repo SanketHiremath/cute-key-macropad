@@ -23,18 +23,17 @@
 
     };
 
-    left_encoder: encoder_left {
+
+    encoder: encoder {
         compatible = "alps,ec11";
+        label = "ENCODER";
+        resolution = <4>;
         a-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 00 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
-        status = "okay";
     };
-
-    sensors: sensors {
+    sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-        triggers-per-rotation = <20>;
+        sensors = <&encoder>;
     };
 
 

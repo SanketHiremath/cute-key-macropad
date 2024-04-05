@@ -27,8 +27,8 @@
         default_layer {
             bindings = <
                 &kp LC(C)
-                &kp LSHIFT(S)
-                &kp LC(V)
+                &kp LC(LS(V))
+                &kp LC(C)
                 &kp F5
                 &kp F5
 

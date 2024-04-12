@@ -46,7 +46,7 @@
                 &kp F5
                 &kp F5
                 &tog layer_two
-                &kp F5
+                &tog layer_two
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

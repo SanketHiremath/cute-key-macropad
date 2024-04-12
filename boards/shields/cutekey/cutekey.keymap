@@ -32,7 +32,7 @@
                 &kp LC(LS(V))
                 &kp LC(F)
                 &kp LC(SLASH)
-                &mo layer_two
+                &tog layer_two
                 &kp F5
 
             >;
@@ -45,7 +45,7 @@
                 &kp F5
                 &kp F5
                 &kp F5
-                &lt layer_default
+                &tog layer_two
                 &kp F5
 
             >;

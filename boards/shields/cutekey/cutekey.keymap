@@ -27,13 +27,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "layer_default";
             bindings = <
                 &kp LC(C)
                 &kp LC(LS(V))
                 &kp LC(F)
                 &kp LC(SLASH)
-                &lt layer_two
+                &mo layer_two
                 &kp F5
 
             >;
@@ -41,7 +40,6 @@
         };
 
         second_layer {
-            label = "layer_two";
             bindings = <
                 &kp F5
                 &kp F5

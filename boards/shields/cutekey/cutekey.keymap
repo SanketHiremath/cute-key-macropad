@@ -11,6 +11,8 @@
 #include <dt-bindings/zmk/reset.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define layer_default 0
+#define layer_two 1
 
 //-----------------------
 //   1(copy) |  2(find)  |  O(switch)

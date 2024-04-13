@@ -33,7 +33,7 @@
                 &kp LC(F)
                 &kp LC(SLASH)
                 &tog layer_two
-                &tog layer_two
+                &kp F5
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -41,12 +41,12 @@
 
         second_layer {
             bindings = <
-                &kp F5
-                &kp F5
-                &kp F5
-                &kp F5
+                &kp LC(LS(M))   //mute,unmute
+                &kp LC(LS(O))   //video on,off
+                &kp LC(LS(H))   //hang up call
+                &kp LC(LS(A))   //accept screen share
                 &tog layer_two
-                &tog layer_two
+                &kp LC(LS(J))   //join meeting from toast
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

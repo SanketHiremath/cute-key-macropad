@@ -33,7 +33,7 @@
                 &kp LC(F)
                 &kp LC(SLASH)
                 &kp F5
-                &tog layer_two
+                &kp F5
                 
 
             >;
@@ -47,7 +47,7 @@
                 &kp LC(LS(H))   //hang up call
                 &kp LC(LS(A))   //accept screen share
                 &kp LC(LS(J))   //join meeting from toast
-                &tog layer_two
+                &kp F5
                 
 
             >;

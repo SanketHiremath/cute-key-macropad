@@ -6,35 +6,32 @@
 
  / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,kscan = &default_kscan;
     };
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
-        wakeup-source;
+        label = "default_kscan";
 
         input-gpios
-            = <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-              <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-              <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-              <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-              <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,     //switch
-              <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,
+              <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,
+              <&gpio1 00 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
             ;
     };
 
-
-    encoder: encoder {
+    left_encoder: encoder_left {
         compatible = "alps,ec11";
-        label = "ENCODER";
-        resolution = <4>;
-        a-gpios = <&gpio1 00 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        label = "encoder";
+        a-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP))>;
+        steps = <80>;
+        status = "okay";
     };
+
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder>;
+        sensors = <&left_encoder>;
     };
-
 
 };

@@ -6,4 +6,3 @@ url: https://github.com/SanketHiremath/cute-key-macropad
 requires: [nice_nano]
 features:
   - keys
-  - encoder

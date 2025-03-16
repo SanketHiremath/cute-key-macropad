@@ -8,50 +8,54 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/reset.h>
-#include <dt-bindings/zmk/ext_power.h>
-
-#define layer_default 0
-#define layer_two 1
-
-//-----------------------
-//   1(copy) |  2(find)  |  O(switch)
-//           |           |
-//-----------------------------------
-//  3(paste) | 4(ctrl+/) | 5(build)  |
-//           |           |           |
-//-----------------------------------
 
 / {
+    macros {
+        finder_home: finder_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = 
+                <&macro_press &kp LEFT_COMMAND>,
+                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_tap &kp H>,
+                <&macro_release &kp LEFT_COMMAND>,
+                <&macro_release &kp LEFT_SHIFT>;
+        };
+        finder_desktop: finder_desktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = 
+                <&macro_press &kp LEFT_COMMAND>,
+                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_tap &kp D>,
+                <&macro_release &kp LEFT_COMMAND>,
+                <&macro_release &kp LEFT_SHIFT>;
+        };
+        finder_downloads: finder_downloads {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = 
+                <&macro_press &kp LEFT_COMMAND>,
+                <&macro_press &kp LEFT_ALT>,
+                <&macro_tap &kp L>,
+                <&macro_release &kp LEFT_COMMAND>,
+                <&macro_release &kp LEFT_ALT>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp LC(C)
-                &kp LC(LS(V))
-                &kp LC(F)
-                &kp LC(SLASH)
-                &kp F5
-                &kp F5
-                
-
+                &bt BT_CLR  &finder_downloads  &finder_desktop  &finder_home
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        second_layer {
-            bindings = <
-                &kp LC(LS(M))   //mute,unmute
-                &kp LC(LS(O))   //video on,off
-                &kp LC(LS(H))   //hang up call
-                &kp LC(LS(A))   //accept screen share
-                &kp LC(LS(J))   //join meeting from toast
-                &kp F5
-                
-
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
     };
 };

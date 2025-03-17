@@ -9,7 +9,7 @@
         zmk,kscan = &default_kscan;
     };
 
-    kscan0: kscan {
+    default_kscan: kscan {
         compatible = "zmk,kscan-gpio-direct";
         label = "default_kscan";
 

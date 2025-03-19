@@ -47,9 +47,7 @@
                 <&macro_release &kp LEFT_COMMAND>,
                 <&macro_release &kp LEFT_ALT>;
         };
-        extra1 {
-            status = "reserved";
-        };
+
     };
     keymap {
         compatible = "zmk,keymap";

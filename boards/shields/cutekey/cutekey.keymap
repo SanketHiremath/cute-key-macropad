@@ -17,10 +17,8 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings = 
-                <&macro_press &kp LEFT_COMMAND>,
                 <&macro_press &kp LEFT_SHIFT>,
-                <&macro_tap &kp H>,
-                <&macro_release &kp LEFT_COMMAND>,
+                <&macro_tap &kp A>,
                 <&macro_release &kp LEFT_SHIFT>;
         };
         finder_desktop: finder_desktop {
@@ -29,10 +27,8 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings = 
-                <&macro_press &kp LEFT_COMMAND>,
                 <&macro_press &kp LEFT_SHIFT>,
-                <&macro_tap &kp D>,
-                <&macro_release &kp LEFT_COMMAND>,
+                <&macro_tap &kp B>,
                 <&macro_release &kp LEFT_SHIFT>;
         };
         finder_downloads: finder_downloads {
@@ -41,11 +37,9 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings = 
-                <&macro_press &kp LEFT_COMMAND>,
-                <&macro_press &kp LEFT_ALT>,
-                <&macro_tap &kp L>,
-                <&macro_release &kp LEFT_COMMAND>,
-                <&macro_release &kp LEFT_ALT>;
+                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_tap &kp C>,
+                <&macro_release &kp LEFT_SHIFT>;
         };
 
     };
@@ -57,6 +51,9 @@
                 &bt BT_CLR  &finder_downloads  &finder_desktop  &finder_home  &studio_unlock
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN>;
+        };
+        extra1 {
+            status = "reserved";
         };
     };
 };

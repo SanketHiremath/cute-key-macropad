@@ -71,7 +71,7 @@
 
         default_layer {
             bindings = <
-                &paste  &copy  &indent  &line_comment  &clean_build  &tog NAV 
+                &paste  &copy  &indent  &line_comment  &clean_build  &lt NAV SPACE 
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };

@@ -76,7 +76,7 @@
 
         default_layer {
             bindings = <
-                &paste  &copy  &indent  &line_comment  &clean_build  &mo 1  
+                &paste  &copy  &indent  &line_comment  &clean_build  &mo 0  
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };

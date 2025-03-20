@@ -12,6 +12,8 @@
 #define DEFAULT 0
 #define NAV     1
 
+&lt { quick-tap-ms = <200>; };
+
 / {
     macros {
         copy: copy {
@@ -81,7 +83,7 @@
 
         nav_layer {
             bindings = <
-                &bootloader  &bt BT_CLR  &none  &none  &none  &trans 
+                &kp A  &bt BT_CLR  &none  &none  &none  &trans 
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };

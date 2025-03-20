@@ -78,7 +78,7 @@
 
         nav_layer {
             bindings = <
-                &bootloader  &bt BT_CLR  &none  &none  &none  &tog DEFAULT 
+                &bootloader  &bt BT_CLR  &none  &none  &none  &trans 
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };

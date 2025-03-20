@@ -66,6 +66,9 @@
         };
 
     };
+};
+
+/{
     keymap {
         compatible = "zmk,keymap";
 

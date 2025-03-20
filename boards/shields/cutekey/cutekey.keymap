@@ -9,6 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define DEFAULT 0
+#define NAV     1
+
 / {
     macros {
         copy: copy {
@@ -68,9 +71,16 @@
 
         default_layer {
             bindings = <
-                &paste  &copy  &indent  &line_comment  &clean_build  &bt BT_CLR
+                &paste  &copy  &indent  &line_comment  &clean_build  &tog NAV 
             >;
-            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+        };
+
+        nav_layer {
+            bindings = <
+                &bootloader  &bt BT_CLR  &none  &none  &none  &tog DEFAULT 
+            >;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
 
     };

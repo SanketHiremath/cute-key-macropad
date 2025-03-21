@@ -76,14 +76,14 @@
 
         nav_layer {
             bindings = <
-                &kp A  &bt BT_CLR  &none  &none  &none  &mo 1
+                &kp A  &bt BT_CLR  &none  &none  &none  &trans
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
 
         default_layer {
             bindings = <
-                &paste  &copy  &indent  &line_comment  &clean_build  &trans  
+                &paste  &copy  &indent  &line_comment  &clean_build  &mo 1
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };

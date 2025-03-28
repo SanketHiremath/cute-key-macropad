@@ -76,9 +76,9 @@
         
         default_layer {
             bindings = <
-                &paste  &copy  &indent  &line_comment  &clean_build  &clean_build
+                &paste  &copy  &indent  &line_comment  &clean_build  &bootloader
             >;
-            sensor-bindings = <&inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
     };

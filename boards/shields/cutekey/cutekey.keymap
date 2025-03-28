@@ -66,6 +66,15 @@
                 <&macro_tap &kp F11>,
                 <&macro_release &kp LEFT_SHIFT>;
         };
+        boot: boot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = 
+                <&bootloader>;
+
+        };
 
     };
 };
@@ -76,7 +85,7 @@
         
         default_layer {
             bindings = <
-                &paste  &copy  &indent  &line_comment  &clean_build  &bt BT_CLR
+                &paste  &copy  &indent  &line_comment  &clean_build  &boot
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };

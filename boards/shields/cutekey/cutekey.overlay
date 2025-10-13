@@ -7,6 +7,7 @@
  / {
     chosen {
         zmk,kscan = &default_kscan;
+        zmk,battery = &vbatt;
     };
 
     default_kscan: kscan {
@@ -36,6 +37,14 @@
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        label = "BATTERY";
+        io-channels = <&adc 4>;      /* P0.02 in nRF ADC channel 2 – change to your pin */
+        output-ohms = <100000>;      /* upper resistor of divider */
+        full-ohms   = <200000>;      /* upper + lower resistor */
     };
 
 };

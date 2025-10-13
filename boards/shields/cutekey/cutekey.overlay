@@ -12,6 +12,7 @@
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-direct";
         label = "default_kscan";
+        wakeup-source;                    /* WAKE-ADD */
 
         input-gpios
             = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,
@@ -38,3 +39,7 @@
     };
 
 };
+
+/* Enable wake-up on the GPIO controllers that own the keys */
+&gpio0 { wakeup-source; };   /* WAKE-ADD */
+&gpio1 { wakeup-source; };   /* WAKE-ADD */

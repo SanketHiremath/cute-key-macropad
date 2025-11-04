@@ -42,7 +42,7 @@
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
         label = "BATTERY";
-        io-channels = <&adc 4>;      /* P0.02 in nRF ADC channel 2 – change to your pin */
+        io-channels = <&adc 2>;      /* P0.02 in nRF ADC channel 2 – change to your pin */
         output-ohms = <100000>;      /* upper resistor of divider */
         full-ohms   = <200000>;      /* upper + lower resistor */
     };

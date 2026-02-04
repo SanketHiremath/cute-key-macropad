@@ -19,6 +19,16 @@
         transform = <&default_transform>;
         kscan = <&default_kscan>;
         keys  = <&key0 &key1 &key2 &key3 &key4 &key5>;
+
+        // Top Row
+        key0: key_0 { #key-cells = <0>; x = <0>;    y = <0>;    width = <1900>; height = <1900>; };
+        key1: key_1 { #key-cells = <0>; x = <1900>; y = <0>;    width = <1900>; height = <1900>; };
+        key2: key_2 { #key-cells = <0>; x = <3800>; y = <0>;    width = <1900>; height = <1900>; };
+        
+        // Bottom Row
+        key3: key_3 { #key-cells = <0>; x = <0>;    y = <1900>; width = <1900>; height = <1900>; };
+        key4: key_4 { #key-cells = <0>; x = <1900>; y = <1900>; width = <1900>; height = <1900>; };
+        key5: key_5 { #key-cells = <0>; x = <3800>; y = <1900>; width = <1900>; height = <1900>; };
     };
 
     /* Matrix Transform (Direct GPIO: Row=Index, Col=0) */
@@ -30,19 +40,6 @@
             RC(0,0) RC(1,0) RC(2,0)
             RC(3,0) RC(4,0) RC(5,0)
         >;
-    };
-
-    /* Key Definitions (2x3 Grid) */
-    layouts {
-        // Top Row
-        key0: key_0 { compatible = "zmk,physical-layout-key"; #key-cells = <0>; x = <0>;    y = <0>;    width = <1900>; height = <1900>; };
-        key1: key_1 { compatible = "zmk,physical-layout-key"; #key-cells = <0>; x = <1900>; y = <0>;    width = <1900>; height = <1900>; };
-        key2: key_2 { compatible = "zmk,physical-layout-key"; #key-cells = <0>; x = <3800>; y = <0>;    width = <1900>; height = <1900>; };
-        
-        // Bottom Row
-        key3: key_3 { compatible = "zmk,physical-layout-key"; #key-cells = <0>; x = <0>;    y = <1900>; width = <1900>; height = <1900>; };
-        key4: key_4 { compatible = "zmk,physical-layout-key"; #key-cells = <0>; x = <1900>; y = <1900>; width = <1900>; height = <1900>; };
-        key5: key_5 { compatible = "zmk,physical-layout-key"; #key-cells = <0>; x = <3800>; y = <1900>; width = <1900>; height = <1900>; };
     };
 
     default_kscan: kscan {

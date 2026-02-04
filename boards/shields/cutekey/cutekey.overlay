@@ -20,7 +20,7 @@
               <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
               <&gpio1 00 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
               <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-              <&gpio0 02 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+              <&gpio1 06 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, /* CHANGED from P0.02 (ADC collision) to dummy P1.06 */
               <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
@@ -42,9 +42,9 @@
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
         label = "BATTERY";
-        io-channels = <&adc 2>;      /* P0.04 (AIN2) on nice!nano v2 */
-        output-ohms = <2000000>;     /* 2M Ohm lower resistor */
-        full-ohms   = <2806000>;     /* 2M + 806k Ohm total resistance */
+        io-channels = <&adc 0>;      /* Switch to P0.02 (AIN0) */
+        output-ohms = <100000>;      /* Restore original 100k/200k values */
+        full-ohms   = <200000>;
     };
 
 };

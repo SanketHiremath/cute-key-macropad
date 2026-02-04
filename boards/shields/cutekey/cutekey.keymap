@@ -15,6 +15,16 @@
 &lt { quick-tap-ms = <200>; };
 
 / {
+    behaviors {
+        paste_pair: paste_pair {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            bindings = <&kp>, <&paste>;
+        };
+    };
+
     macros {
         copy: copy {
             compatible = "zmk,behavior-macro";
@@ -85,7 +95,7 @@
         
         default_layer {
             bindings = <
-                &paste  &copy  &indent  &line_comment  &clean_build  &none
+                &paste_pair BT_CLR 0  &copy  &indent  &line_comment  &clean_build  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };

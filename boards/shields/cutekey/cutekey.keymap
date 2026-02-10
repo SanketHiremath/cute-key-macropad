@@ -92,7 +92,7 @@
         
         default_layer {
             bindings = <
-                &paste  &bt_pair  &indent  &line_comment  &clean_build  &copy
+                &copy  &paste  &indent  &line_comment  &bt_pair  &clean_build
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };

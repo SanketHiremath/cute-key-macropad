@@ -91,10 +91,19 @@
         compatible = "zmk,keymap";
         
         default_layer {
+            display-name = "Base";
             bindings = <
-                &copy  &paste  &indent  &line_comment  &bt_pair  &clean_build
+                &copy  &paste  &indent  &line_comment  &studio_unlock  &clean_build
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
         };
 
     };

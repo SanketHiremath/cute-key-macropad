@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <physical_layouts.dtsi>
+
+/ {
+    /*
+     * Physical key layout (2 rows × 3 columns):
+     *
+     *   Key0    Key2    Key4
+     *   Key1    Key3    Key5
+     *
+     * GPIO mapping:
+     *   0.20  0.29  1.15
+     *   0.22  1.00  0.02
+     */
+
+    default_transform: matrix_transform {
+        compatible = "zmk,matrix-transform";
+        rows = <1>;
+        columns = <6>;
+        map = <
+            RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)
+        >;
+    };
+
+    cutekey_layout: cutekey_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "CuteKey";
+        transform = <&default_transform>;
+        kscan = <&default_kscan>;
+        keys  //         w    h    x    y   rot  rx   ry
+            = <&key_physical_attrs 100 100   0   0    0   0   0>
+            , <&key_physical_attrs 100 100 100   0    0   0   0>
+            , <&key_physical_attrs 100 100 200   0    0   0   0>
+            , <&key_physical_attrs 100 100   0 100    0   0   0>
+            , <&key_physical_attrs 100 100 100 100    0   0   0>
+            , <&key_physical_attrs 100 100 200 100    0   0   0>
+            ;
+    };
+};

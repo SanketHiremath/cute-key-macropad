@@ -4,14 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
- / {
-    chosen {
-        zmk,kscan = &default_kscan;
-    };
+#include "cutekey-layouts.dtsi"
 
-    /* 0.20  0.29  1.15
-       0.22  1.00  0.02
-    */
+ / {
     
 
     default_kscan: kscan {

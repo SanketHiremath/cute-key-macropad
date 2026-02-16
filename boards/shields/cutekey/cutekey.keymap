@@ -89,12 +89,10 @@
 / {
     behaviors {
         studio_bt: studio_bt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "STUDIO_BT";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&bt_pair>, <&studio_unlock>;
+            bindings = <&studio_unlock>, <&bt_pair>;
         };
     };
 };

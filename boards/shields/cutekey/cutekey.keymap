@@ -86,6 +86,19 @@
     };
 };
 
+/ {
+    behaviors {
+        studio_bt: studio_bt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STUDIO_BT";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&bt_pair>, <&studio_unlock>;
+        };
+    };
+};
+
 /{
     keymap {
         compatible = "zmk,keymap";
@@ -93,7 +106,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-                &copy  &paste  &indent  &line_comment  &studio_unlock  &clean_build
+                &copy  &paste  &indent  &line_comment  &studio_bt  &clean_build
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };

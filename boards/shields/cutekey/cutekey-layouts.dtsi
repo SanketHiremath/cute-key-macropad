@@ -33,13 +33,13 @@
         display-name = "CuteKey";
         transform = <&default_transform>;
         kscan = <&default_kscan>;
-        keys  //         w    h    x    y   rot  rx   ry
-            = <&key_physical_attrs 100 100   0   0    0   0   0>
-            , <&key_physical_attrs 100 100 100   0    0   0   0>
-            , <&key_physical_attrs 100 100 200   0    0   0   0>
-            , <&key_physical_attrs 100 100   0 100    0   0   0>
-            , <&key_physical_attrs 100 100 100 100    0   0   0>
-            , <&key_physical_attrs 100 100 200 100    0   0   0>
+        keys  // Order must match logical keymap order: TL, BL, TM, BM, TR, BR
+            = <&key_physical_attrs 100 100   0   0    0   0   0>  // TL
+            , <&key_physical_attrs 100 100   0 100    0   0   0>  // BL
+            , <&key_physical_attrs 100 100 100   0    0   0   0>  // TM
+            , <&key_physical_attrs 100 100 100 100    0   0   0>  // BM
+            , <&key_physical_attrs 100 100 200   0    0   0   0>  // TR
+            , <&key_physical_attrs 100 100 200 100    0   0   0>  // BR
             ;
     };
 };
